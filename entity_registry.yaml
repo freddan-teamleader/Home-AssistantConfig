@@ -1,0 +1,20 @@
+media_player.apple_tv:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: 025b43fe6acb5eaf7e9b06105217eb5ac92c13c831cebca50348f7fd8a8d791e
+media_player.lounge:
+  config_entry_id: 5124e3bccd324ed4943f1b5c2795d52d
+  name:
+  platform: sonos
+  unique_id: RINCON_7828CAA8CED601400
+media_player.sallskapsrum:
+  config_entry_id: 5124e3bccd324ed4943f1b5c2795d52d
+  name:
+  platform: sonos
+  unique_id: RINCON_B8E937D494E401400
+remote.apple_tv:
+  config_entry_id:
+  name:
+  platform: apple_tv
+  unique_id: 025b43fe6acb5eaf7e9b06105217eb5ac92c13c831cebca50348f7fd8a8d791e

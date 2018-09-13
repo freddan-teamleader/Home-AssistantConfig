@@ -1,0 +1,72 @@
+title: Villa Walther
+excluded_entities:
+  - remote.apple_tv
+  - sensor.okand_temperature
+automation:
+  alias: 'Update Available Notifications'
+  trigger:
+    platform: state
+    entity_id: updater.updater
+  action:
+    service: notify.notify
+    data:
+      message: 'Update for Home Assistant is available.'  
+views:
+  - icon: mdi:home-assistant
+    title: Home
+    cards:      
+      - type: entities
+        title: Groups
+        show_header_toggle: true
+        entities:
+          - group.all_remotes
+          - group.all_switches
+
+      - type: entities
+        title: Sensors
+        show_header_toggle: true
+        entities:
+          - sensor.hundhus_inne_humidity
+          - sensor.hundhus_inne_temperature
+          - sensor.hundhus_ute_temperature
+          - sensor.yr_symbol
+
+      - type: entities
+        title: Sun
+        show_header_toggle: true
+        entities:
+          - sun.sun
+
+      - type: entities
+        title: Switches
+        show_header_toggle: true
+        entities:
+          - switch.ikea_lampa
+          - switch.lounge
+          - switch.vardagsrum
+          - switch.vitrinskap
+      
+      - type: picture-glance
+        title: Dogs
+        entities:
+          - sensor.hundhus_inne_temperature
+        camera_image: camera.hundhus_inne
+           
+  - icon: mdi:speaker
+    title: Sonos
+    
+    cards: 
+      - type: horizontal-stack
+        cards:
+        - type: media-control
+          entity: media_player.sallskapsrum        
+        - type: media-control
+          entity: media_player.lounge
+
+  - icon: mdi:television     
+    title: TV
+    cards:
+      - type: media-control
+        entity: media_player.apple_tv
+   
+
